@@ -1,2 +1,52 @@
+# Ignore backend and frontend build artifacts
 LifeOS.back/
 LifeOS.front/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node package directories
+node_modules/
+LifeOS.back/node_modules/
+LifeOS.front/node_modules/
+
+# Build output
+dist/
+build/
+out/
+coverage/
+LifeOS.back/dist/
+LifeOS.back/build/
+LifeOS.front/dist/
+LifeOS.front/build/
+
+# .NET build artifacts
+LifeOS.back/bin/
+LifeOS.back/obj/
+*.dll
+*.exe
+*.pdb
+
+# Environment files
+.env
+.env.*
+LifeOS.back/.env*
+LifeOS.front/.env*
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+*.tmp
+*.temp
+*.swp
