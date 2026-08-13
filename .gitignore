@@ -2,6 +2,9 @@
 LifeOS.back/
 LifeOS.front/
 
+# Root orchestration has no dependencies; avoid an accidental root lockfile.
+package-lock.json
+
 # OS files
 .DS_Store
 Thumbs.db

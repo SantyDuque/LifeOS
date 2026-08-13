@@ -1,20 +1,17 @@
 # Local Development
 
-## Purpose
-Define the LifeOS ecosystem standard for local development.
+Use Node.js 22+ and Docker Compose. From the container repository:
 
-## Responsibilities
-Establish shared product, architecture, engineering, design, or delivery guidance across repositories.
+```powershell
+npm run install:all
+Copy-Item LifeOS.back/.env.example LifeOS.back/.env
+Copy-Item LifeOS.front/public/config.example.json LifeOS.front/public/config.json
+npm run infra:up
+npm run migrate
+```
 
-## Design Decisions
-LifeOS favors documentation-first, feature-focused, accessible, secure, and observable solutions with clear frontend/backend ownership.
+Set the real Supabase project URL, issuer, audience, and JWKS URL in the ignored backend `.env`. Set only the public project URL and anon/publishable key in frontend `public/config.json`. Configure Supabase redirect URLs for `http://localhost:4200` and the production HTTPS origin.
 
-## Best Practices
-Keep guidance concise, linked, measurable where possible, and updated alongside meaningful change.
+Start `npm run backend`, `npm run worker`, and `npm run frontend` in separate terminals. PostgreSQL uses port 5432, Redis 6379, the API 3000, and Angular 4200. `CORS_ORIGINS` must list every actual frontend origin.
 
-## Future Improvements
-Refine through user research, delivery data, and architecture reviews.
-
-## Related Documentation
-[Project Architecture](../../ARCHITECTURE.md) · [Roadmap](../../ROADMAP.md)
-
+Diagnostics: `/api/v1/health/live` checks only the API process; `/api/v1/health/ready` checks PostgreSQL and Redis. Run `npm run validate` for the coordinated validation suite.
