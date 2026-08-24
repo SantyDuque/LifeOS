@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:47:35.303Z`
+- Exported: `2026-08-24T20:43:42.369Z`
 - Selected roots: `1`
 
-## Logos `COMPONENT_SET`
+## Branding/Logo `COMPONENT_SET`
 
 - Node ID: `81:4536`
 - Size: `80px × 210px`
-- Position: `x -13535px, y -3041px`
+- Position: `x -12316px, y -3491px`
 - Auto Layout: `VERTICAL`
 - Gap: `24px`
 - Padding: `20px 20px 20px 20px`
@@ -140,4 +140,3 @@
 - Position: `x 0px, y 0px`
 - Fills: `#FFFFFF`
 - Radius: `0px`
-

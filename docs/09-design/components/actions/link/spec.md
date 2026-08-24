@@ -2,16 +2,16 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:46:03.471Z`
+- Exported: `2026-08-24T20:56:39.911Z`
 - Selected roots: `1`
 
 > Generated from the selected Figma nodes. Use numeric properties as authoritative and screenshots for visual composition.
 
-## Link `COMPONENT_SET`
+## Actions/Link `COMPONENT_SET`
 
 - Node ID: `77:3764`
 - Size: `288px × 438px`
-- Position: `x -13885px, y -3252px`
+- Position: `x -13972px, y -3673px`
 - Auto Layout: `VERTICAL`
 - Gap: `20px`
 - Padding: `20px 20px 20px 20px`
@@ -31,7 +31,7 @@
 - Fills: `#FFFFFF`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `80:4248`
 - Size: `214.15px × 18.5px`
@@ -45,7 +45,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I80:4248;80:4213`
 - Size: `18.33px × 18.5px`
@@ -98,7 +98,7 @@
 - Fills: `#EAEEF1`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `80:4280`
 - Size: `214.15px × 18.5px`
@@ -112,7 +112,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I80:4280;80:4213`
 - Size: `18.33px × 18.5px`
@@ -165,7 +165,7 @@
 - Fills: `#007F9D @ 10%`
 - Strokes: `#00647C`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `80:4291`
 - Size: `214.15px × 18.5px`
@@ -179,7 +179,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I80:4291;80:4213`
 - Size: `18.33px × 18.5px`
@@ -232,7 +232,7 @@
 - Fills: `#FFFFFF`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `80:4297`
 - Size: `214.15px × 18.5px`
@@ -246,7 +246,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I80:4297;80:4213`
 - Size: `18.33px × 18.5px`
@@ -300,7 +300,7 @@
 - Strokes: `#00647C` at `1px`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `80:4303`
 - Size: `214.15px × 18.5px`
@@ -314,7 +314,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I80:4303;80:4213`
 - Size: `18.33px × 18.5px`
@@ -368,7 +368,7 @@
 - Strokes: `#6E797E` at `1px`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `91:769`
 - Size: `214.15px × 18.5px`
@@ -382,7 +382,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I91:769;80:4213`
 - Size: `18.33px × 18.5px`
@@ -435,7 +435,7 @@
 - Fills: `#EAEEF1`
 - Strokes: `#6E797E`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `92:793`
 - Size: `214.15px × 18.5px`
@@ -449,7 +449,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I92:793;80:4213`
 - Size: `18.33px × 18.5px`
@@ -502,7 +502,7 @@
 - Fills: `#EAEEF1`
 - Radius: `4px`
 
-#### Navigation Content `INSTANCE`
+#### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `152:4389`
 - Size: `214.15px × 18.5px`
@@ -516,7 +516,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-##### Icon `INSTANCE`
+##### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I152:4389;80:4213`
 - Size: `18.33px × 18.5px`
@@ -556,4 +556,3 @@
 - Fills: `#171C1E`
 - Text: "Dashboard"
 - Typography: `Inter Regular, 12px, line-height 16px`
-

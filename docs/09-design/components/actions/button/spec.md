@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T16:52:04.752Z`
+- Exported: `2026-08-24T20:40:27.142Z`
 - Selected roots: `1`
 
-## Button `COMPONENT_SET`
+## Actions/Button `COMPONENT_SET`
 
 - Node ID: `237:6310`
 - Size: `424px × 235px`
-- Position: `x -12329px, y -3021px`
+- Position: `x -13619px, y -3673px`
 - Auto Layout: `VERTICAL`
 - Gap: `20px`
 - Padding: `20px 20px 20px 20px`
@@ -62,7 +62,7 @@
 - Text: "Log In"
 - Typography: `Inter Regular, 16px, line-height 16px`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `237:6303`
 - Size: `18.5px × 18.5px`
@@ -129,7 +129,7 @@
 - Text: "Log In"
 - Typography: `Inter Regular, 16px, line-height 16px`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `237:6314`
 - Size: `18.5px × 18.5px`
@@ -195,7 +195,7 @@
 - Text: "Log In"
 - Typography: `Inter Regular, 16px, line-height 16px`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `237:6319`
 - Size: `18.5px × 18.5px`
@@ -215,4 +215,3 @@
 - Position: `x 2.3px, y 2.2px`
 - Fills: `#FFFFFF`
 - Radius: `0px`
-

@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:41:26.494Z`
+- Exported: `2026-08-24T20:39:27.692Z`
 - Selected roots: `1`
 
-## Link Accounts `COMPONENT_SET`
+## Actions/Account-Link  `COMPONENT_SET`
 
 - Node ID: `214:5900`
 - Size: `518px × 62px`
-- Position: `x -12907px, y -2893px`
+- Position: `x -13619px, y -3368px`
 - Auto Layout: `HORIZONTAL`
 - Gap: `20px`
 - Padding: `20px 20px 20px 20px`

@@ -2,15 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:49:02.699Z`
+- Exported: `2026-08-24T20:44:45.469Z`
 - Selected roots: `1`
 
-
-## Logo Area `COMPONENT`
+## Branding/Logo-Area `COMPONENT`
 
 - Node ID: `81:4522`
 - Size: `280px × 80px`
-- Position: `x -13885px, y -2708px`
+- Position: `x -12316px, y -3673px`
 - Auto Layout: `HORIZONTAL`
 - Gap: `16px`
 - Padding: `0px 24px 0px 24px`
@@ -18,7 +17,7 @@
 - Strokes: `#BDC8CE @ 30%`
 - Radius: `0px`
 
-### Logos `INSTANCE`
+### Branding/Logo `INSTANCE`
 
 - Node ID: `81:4564`
 - Size: `40px × 40px`
@@ -100,4 +99,3 @@
 - Fills: `#6E797E`
 - Text: "PREMIUM MANAGEMENT"
 - Typography: `Inter Bold, 10px, line-height 15px`
-

@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:33:37.930Z`
+- Exported: `2026-08-24T20:46:54.218Z`
 - Selected roots: `1`
 
-## KPI - Subtitles `COMPONENT_SET`
+## Data Display/KPI-Subtitle `COMPONENT_SET`
 
 - Node ID: `94:1345`
 - Size: `316.4px × 62px`
-- Position: `x -12907px, y -3395px`
+- Position: `x -12800px, y -3412px`
 - Auto Layout: `HORIZONTAL`
 - Gap: `32px`
 - Padding: `20px 20px 20px 20px`
@@ -58,7 +58,7 @@
 - Sizing: primary `FIXED`, counter `FIXED`
 - Radius: `0px`
 
-#### Icon `INSTANCE`
+#### Fundadations/Icon `INSTANCE`
 
 - Node ID: `94:1368`
 - Size: `22px × 18.5px`
@@ -87,4 +87,3 @@
 - Fills: `#00647C`
 - Text: "+2.4%"
 - Typography: `Inter Bold, 15px, line-height 16px`
-

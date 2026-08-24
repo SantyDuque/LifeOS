@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:50:16.404Z`
+- Exported: `2026-08-24T20:55:08.771Z`
 - Selected roots: `1`
 
-## Sidebar Navigation `COMPONENT_SET`
+## Navigation/Sidebar `COMPONENT_SET`
 
 - Node ID: `83:161`
 - Size: `434px × 842px`
-- Position: `x -13401px, y -3673px`
+- Position: `x -11951px, y -3673px`
 - Auto Layout: `HORIZONTAL`
 - Gap: `24px`
 - Padding: `20px 20px 20px 20px`
@@ -28,7 +28,7 @@
 - Sizing: primary `FIXED`, counter `FIXED`
 - Fills: `#FFFFFF`
 
-#### Logo Area `INSTANCE`
+#### Branding/Logo-Area `INSTANCE`
 
 - Node ID: `83:90`
 - Size: `280px × 81px`
@@ -44,7 +44,7 @@
   - `Subtittle#81:34`: `PREMIUM MANAGEMENT`
   - `Tittle#81:33`: `LifeOS`
 
-##### Logos `INSTANCE`
+##### Branding/Logo `INSTANCE`
 
 - Node ID: `I83:90;81:4564`
 - Size: `40px × 40px`
@@ -175,7 +175,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Active`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:92;80:4291`
 - Size: `214.15px × 18.5px`
@@ -189,7 +189,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Dashboard`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:92;80:4291;80:4213`
 - Size: `18.33px × 18.5px`
@@ -246,7 +246,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:93;80:4248`
 - Size: `214.15px × 18.5px`
@@ -260,7 +260,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Finances`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:93;80:4248;80:4204`
 - Size: `18.33px × 18.5px`
@@ -317,7 +317,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:94;80:4248`
 - Size: `214.15px × 18.5px`
@@ -331,7 +331,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Habits`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:94;80:4248;80:4219`
 - Size: `18.33px × 18.5px`
@@ -388,7 +388,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I102:1832;80:4248`
 - Size: `214.15px × 18.5px`
@@ -402,7 +402,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Gym`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I102:1832;80:4248;102:1820`
 - Size: `18.33px × 18.5px`
@@ -459,7 +459,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:95;80:4248`
 - Size: `214.15px × 18.5px`
@@ -473,7 +473,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Reading`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:95;80:4248;80:4225`
 - Size: `18.33px × 18.5px`
@@ -530,7 +530,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:96;80:4248`
 - Size: `214.15px × 18.5px`
@@ -544,7 +544,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Study`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:96;80:4248;80:4231`
 - Size: `18.33px × 18.5px`
@@ -601,7 +601,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:97;80:4248`
 - Size: `214.15px × 18.5px`
@@ -615,7 +615,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Goals`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:97;80:4248;80:4237`
 - Size: `18.33px × 18.5px`
@@ -672,7 +672,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I153:4553;80:4248`
 - Size: `214.15px × 18.5px`
@@ -686,7 +686,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Analytics`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I153:4553;80:4248;80:4243`
 - Size: `18.33px × 18.5px`
@@ -755,7 +755,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `S. Default`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:100;152:4389`
 - Size: `214.15px × 18.5px`
@@ -769,7 +769,7 @@
   - `Show Text#80:24`: `true`
   - `Prop`: `Settings`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:100;152:4389;80:4454`
 - Size: `18.33px × 18.5px`
@@ -853,7 +853,7 @@
 - Sizing: primary `FIXED`, counter `AUTO`
 - Fills: `#FFFFFF`
 
-#### Logo Area `INSTANCE`
+#### Branding/Logo-Area `INSTANCE`
 
 - Node ID: `83:163`
 - Size: `88px × 81px`
@@ -869,7 +869,7 @@
   - `Subtittle#81:34`: `PREMIUM MANAGEMENT`
   - `Tittle#81:33`: `LifeOS`
 
-##### Logos `INSTANCE`
+##### Branding/Logo `INSTANCE`
 
 - Node ID: `I83:163;81:4564`
 - Size: `40px × 40px`
@@ -1000,7 +1000,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Active`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:165;80:4291`
 - Size: `18.33px × 18.5px`
@@ -1014,7 +1014,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Dashboard`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:165;80:4291;80:4213`
 - Size: `18.33px × 18.5px`
@@ -1071,7 +1071,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:166;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1085,7 +1085,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Finances`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:166;80:4248;80:4204`
 - Size: `18.33px × 18.5px`
@@ -1142,7 +1142,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:167;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1156,7 +1156,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Habits`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:167;80:4248;80:4219`
 - Size: `18.33px × 18.5px`
@@ -1213,7 +1213,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I102:1928;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1227,7 +1227,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Gym`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I102:1928;80:4248;102:1820`
 - Size: `18.33px × 18.5px`
@@ -1284,7 +1284,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:168;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1298,7 +1298,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Reading`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:168;80:4248;80:4225`
 - Size: `18.33px × 18.5px`
@@ -1355,7 +1355,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:169;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1369,7 +1369,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Study`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:169;80:4248;80:4231`
 - Size: `18.33px × 18.5px`
@@ -1426,7 +1426,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:170;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1440,7 +1440,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Reading`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:170;80:4248;80:4225`
 - Size: `18.33px × 18.5px`
@@ -1497,7 +1497,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `Predeterminada`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:171;80:4248`
 - Size: `18.33px × 18.5px`
@@ -1511,7 +1511,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Analytics`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:171;80:4248;80:4243`
 - Size: `18.33px × 18.5px`
@@ -1580,7 +1580,7 @@
   - `Label#78:0`: `Valor de cadena`
   - `Default`: `S. Default`
 
-###### Navigation Content `INSTANCE`
+###### Navigation/Navigation-Item `INSTANCE`
 
 - Node ID: `I83:173;152:4389`
 - Size: `18.33px × 18.5px`
@@ -1594,7 +1594,7 @@
   - `Show Text#80:24`: `false`
   - `Prop`: `Settings`
 
-###### Icon `INSTANCE`
+###### Fundadations/Icon `INSTANCE`
 
 - Node ID: `I83:173;152:4389;80:4454`
 - Size: `18.33px × 18.5px`
@@ -1666,4 +1666,3 @@
 - Position: `x 0px, y 0px`
 - Fills: `#6E797E`
 - Radius: `0px`
-

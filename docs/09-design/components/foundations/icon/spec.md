@@ -2,14 +2,14 @@
 
 - File: **LifeOS**
 - Page: **Page 1**
-- Exported: `2026-08-24T18:31:31.498Z`
+- Exported: `2026-08-24T20:50:13.878Z`
 - Selected roots: `1`
 
-## Icon `COMPONENT_SET`
+## Fundadations/Icon `COMPONENT_SET`
 
 - Node ID: `78:3825`
 - Size: `169px × 323px`
-- Position: `x -13597px, y -3673px`
+- Position: `x -13054px, y -3673px`
 - Auto Layout: `NONE`
 - Gap: `34px`
 - Padding: `20px 20px 20px 20px`
@@ -458,4 +458,3 @@
 - Position: `x 1.86px, y 4.44px`
 - Fills: `#6E797E`
 - Radius: `0px`
-
