@@ -1,20 +1,7 @@
-# ADR-003-Frontend Architecture
+# ADR-003: React Frontend Architecture
 
-## Purpose
-Record this ecosystem architecture decision.
+**Status:** Accepted
 
-## Responsibilities
-**Status:** Accepted. **Context:** LifeOS requires a documented, consistent direction. **Decision:** adopt the approach named by this ADR. **Alternatives:** evaluate simpler and more specialized options. **Trade-offs:** consistency requires team discipline. **Consequences:** clear cross-repository guidance. **Future considerations:** reconsider using product and operational evidence.
+LifeOS adopts React + TypeScript, Vite, TanStack Router, React Query, Tailwind CSS, and accessible Radix-style primitives as its official frontend architecture. Angular and its compatibility layer are removed.
 
-## Design Decisions
-Favor documentation-first, typed, feature-focused, secure architecture.
-
-## Best Practices
-Review ADRs when their assumptions change.
-
-## Future Improvements
-Supersede rather than rewrite materially changed decisions.
-
-## Related Documentation
-[Architecture](../../ARCHITECTURE.md)
-
+During the redesign foundation phase, the frontend runs against a typed in-memory `LifeOsAdapter` with deterministic fixtures and mock authentication. This preserves a clean integration seam while allowing independent UI iteration. A future HTTP adapter will implement the same interface; this decision does not claim backend integration is complete.

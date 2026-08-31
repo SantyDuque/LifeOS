@@ -1,6 +1,10 @@
 # Architecture
 
-LifeOS comprises an Angular frontend and NestJS modular-monolith backend. The frontend presents accessible feature workspaces and communicates with a versioned REST API. The backend owns business rules and persists source data in PostgreSQL through Prisma. Redis supports caching and BullMQ workers; Supabase provides authentication; integrations are isolated behind provider adapters.
+LifeOS contains two independently runnable applications:
 
-See [System Overview](docs/02-architecture/SystemOverview.md) and [Architecture Diagrams](docs/08-diagrams/ContextDiagram.md).
+- `LifeOS.front`: React 19, TypeScript, Vite, TanStack Router, React Query, Tailwind CSS, Radix primitives, Recharts, Lucide, and Zod.
+- `LifeOS.back`: the existing NestJS modular monolith, Prisma/PostgreSQL persistence, Supabase authentication, and Redis/BullMQ infrastructure.
 
+The current frontend flow is `routes/components → query hooks → LifeOsAdapter → mock adapter → deterministic fixtures`. Components do not perform transport calls. A future HTTP adapter must implement `LifeOsAdapter` and be selected in `src/lib/api/index.ts`; it must not require page rewrites.
+
+Mock authentication returns a deterministic signed-in profile through the same adapter contract. This is intentional temporary infrastructure for redesign work, not completed backend integration.

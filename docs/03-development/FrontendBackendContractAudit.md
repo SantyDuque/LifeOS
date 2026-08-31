@@ -1,6 +1,6 @@
 # Frontend–Backend Contract Audit
 
-Audit date: 2026-08-24. The Angular application is the product consumer. Classification describes the current approved MVP, not whether infrastructure is valuable in isolation.
+Audit date: 2026-08-24. This document records the retired frontend/API mapping and is retained only as integration research. The current React application is intentionally disconnected and classifications below must be revalidated before an API adapter is implemented.
 
 ## Contract matrix
 
@@ -31,7 +31,7 @@ Audit date: 2026-08-24. The Angular application is the product consumer. Classif
 
 ## Contract findings
 
-- Every concrete Angular domain API service maps to an existing Nest controller family. No frontend request without backend route support was found.
+- Every concrete service in the retired frontend mapped to an existing Nest controller family. This does not establish support for the new redesign.
 - Backend reporting endpoints for Finance are the clearest currently unconsumed API surface and are directly relevant to the approved Finance overview. They are not legacy.
 - Finance merchants are the only product-facing controller family with neither a frontend client nor a proven approved screen requirement. Internal transaction/import relevance remains unresolved.
 - `GET /activity` is currently unconsumed but is the existing backend support for the approved recent-activity area, so it is REQUIRED-SOON rather than legacy. Its BullMQ projection/outbox machinery remains backend-only.
@@ -46,7 +46,7 @@ Audit date: 2026-08-24. The Angular application is the product consumer. Classif
 
 - Existing: accounts, transactions, budgets, subscriptions, categories, merchants, plus overview, cash-flow and category-breakdown reporting endpoints.
 - Defensible now: balances/totals only as defined by the existing reporting service, monthly income/expense, category breakdown and budget comparisons by currency/range.
-- Missing: confirm a typed Angular reporting client and exact range/currency semantics against the approved design.
+- Missing: confirm a typed React reporting adapter and exact range/currency semantics against the approved design.
 - Unsupported honestly: a single cross-currency net-worth score without conversion/rate policy.
 - Frontend can proceed: **yes**, after a narrow response-contract review. Best next module.
 
@@ -92,8 +92,8 @@ Audit date: 2026-08-24. The Angular application is the product consumer. Classif
 
 ## Architecture boundary decisions
 
-- Angular owns presentation, routing, form composition and display-only formatting.
+- React owns presentation, routing, form composition and display-only formatting.
 - Nest owns persisted rules, authorization, lifecycle transitions and authoritative cross-record calculations.
-- Complex trends, streaks, scores and cross-currency metrics should be backend aggregates after product semantics are approved, not reconstructed opportunistically in Angular.
+- Complex trends, streaks, scores and cross-currency metrics should be backend aggregates after product semantics are approved, not reconstructed opportunistically in React.
 - Supabase remains the session issuer; Nest validates bearer identity and returns the local profile.
 - API envelopes remain `{ data }`, with paginated collections adding `meta`; no audit change weakened this convention or any privacy/security boundary.

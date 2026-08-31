@@ -10,7 +10,7 @@
     "migrate": "npm run prisma:migrate:deploy --prefix LifeOS.back",
     "backend": "npm run start:dev --prefix LifeOS.back",
     "worker": "npm run start:worker --prefix LifeOS.back",
-    "frontend": "npm start --prefix LifeOS.front",
+    "frontend": "npm run dev --prefix LifeOS.front",
     "validate:back": "npm run prisma:generate --prefix LifeOS.back && npm run prisma:validate --prefix LifeOS.back && npm run format:check --prefix LifeOS.back && npm run lint --prefix LifeOS.back && npm test --prefix LifeOS.back -- --runInBand && npm run test:e2e --prefix LifeOS.back -- --runInBand && npm run build --prefix LifeOS.back && npm audit --omit=dev --prefix LifeOS.back",
     "validate:front": "npm run format:check --prefix LifeOS.front && npm run typecheck --prefix LifeOS.front && npm run lint --prefix LifeOS.front && npm test --prefix LifeOS.front && npm run build --prefix LifeOS.front && npm run test:e2e --prefix LifeOS.front && npm run audit:prod --prefix LifeOS.front",
     "validate": "npm run validate:back && npm run validate:front"

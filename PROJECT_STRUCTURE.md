@@ -1,9 +1,8 @@
 # Project Structure
 
-- `LifeOS/`: ecosystem documentation and project governance.
-- `LifeOS.front/`: Angular client; its `docs/` owns implementation-level frontend decisions.
-- `LifeOS.back/`: NestJS API/workers; its `docs/` owns implementation-level backend decisions.
-- `docs/`: product, cross-repository architecture, engineering process, design direction, management, ADRs, and diagrams.
+- `LifeOS.front/`: official React + TypeScript application, mock adapter, fixtures, unit tests, and browser tests.
+- `LifeOS.back/`: NestJS API, worker, Prisma schema/migrations, and backend tests.
+- `docs/`: repository-wide product, architecture, engineering, and decision records.
+- `.github/workflows/`: independent frontend and backend automation.
 
-The root documentation defines shared contracts; application repositories define local implementation details.
-
+Frontend-specific architecture is documented in `LifeOS.front/README.md`.

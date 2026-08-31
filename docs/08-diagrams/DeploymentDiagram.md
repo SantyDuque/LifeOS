@@ -6,7 +6,7 @@ Visualize the LifeOS ecosystem architecture.
 ## Responsibilities
 ```mermaid
 flowchart TB
-  CDN[Vercel/CDN] --> Web[Angular App]
+  CDN[Vercel/CDN] --> Web[React App]
   Web --> API[API containers]
   API --> Worker[Worker containers]
   API --> DB[(Managed PostgreSQL)]
@@ -26,4 +26,3 @@ Add operational detail as the deployment matures.
 
 ## Related Documentation
 [Architecture](../../ARCHITECTURE.md)
-

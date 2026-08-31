@@ -1,20 +1,7 @@
 # Frontend Overview
 
-## Purpose
-Define the LifeOS ecosystem standard for frontend overview.
+`LifeOS.front` is an independently runnable React + TypeScript SPA. TanStack Router owns navigation, React Query owns asynchronous domain state, and the LifeOS adapter boundary isolates presentation from transport.
 
-## Responsibilities
-Establish shared product, architecture, engineering, design, or delivery guidance across repositories.
+Local development defaults to deterministic mock data and mock authentication. UI components call query hooks, query hooks call `LifeOsAdapter`, and only an adapter may communicate with a future API. The current mock adapter performs no network requests and can be reset by tests.
 
-## Design Decisions
-LifeOS favors documentation-first, feature-focused, accessible, secure, and observable solutions with clear frontend/backend ownership.
-
-## Best Practices
-Keep guidance concise, linked, measurable where possible, and updated alongside meaningful change.
-
-## Future Improvements
-Refine through user research, delivery data, and architecture reviews.
-
-## Related Documentation
-[Project Architecture](../../ARCHITECTURE.md) · [Roadmap](../../ROADMAP.md)
-
+See `LifeOS.front/README.md` for commands, directories, routes, and deferred integration gaps.

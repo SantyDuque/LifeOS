@@ -6,7 +6,7 @@ Visualize the LifeOS ecosystem architecture.
 ## Responsibilities
 ```mermaid
 flowchart TB
-  Frontend[Angular] --> Backend[NestJS]
+  Frontend[React SPA] -. future API adapter .-> Backend[NestJS]
   Backend --> DB[(PostgreSQL)]
   Backend --> Redis[(Redis)]
   Redis --> Workers[BullMQ Workers]
@@ -24,4 +24,3 @@ Add operational detail as the deployment matures.
 
 ## Related Documentation
 [Architecture](../../ARCHITECTURE.md)
-

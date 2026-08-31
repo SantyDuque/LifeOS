@@ -1,6 +1,5 @@
 # Technology Stack
 
-Angular and TypeScript provide a structured, accessible frontend; Angular Material and Tailwind provide dependable primitives and flexible composition; NgRx Signal Store gives local-first reactive state; ECharts visualizes analytics. NestJS and TypeScript provide a modular backend; PostgreSQL and Prisma provide transactional relational storage; Supabase provides authentication; Redis and BullMQ support derived reads and jobs. Docker and GitHub Actions provide repeatable delivery. Vercel and Railway are suitable managed frontend/backend hosting options.
+The official frontend is React + TypeScript, built with Vite and routed with TanStack Router. React Query owns server-shaped asynchronous state, Tailwind CSS and Radix-style primitives provide the design system, Recharts renders analytics, Lucide supplies icons, and Vitest/Testing Library plus Playwright provide automated coverage.
 
-See [Technology Stack ADR](docs/07-decisions/ADR-005-TechnologyStack.md).
-
+The backend remains NestJS + TypeScript with PostgreSQL, Prisma, Supabase authentication, Redis, and BullMQ. Those services are not frontend development prerequisites while mock mode is active.
