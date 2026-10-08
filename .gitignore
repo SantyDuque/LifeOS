@@ -44,6 +44,7 @@ LifeOS.front/.env*
 *.user
 *.userosscache
 *.sln.docstates
+.codex/
 
 # Logs and temporary files
 npm-debug.log*
