@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T13:24:32.359273Z",
+  "title": "Design System: LifeOS",
+  "extensions": {
+    "motion": [
+      {
+        "name": "micro",
+        "value": "120ms",
+        "purpose": "Pressed and immediate control feedback."
+      },
+      {
+        "name": "interaction",
+        "value": "180ms",
+        "purpose": "Hover, selection, and ordinary state changes."
+      },
+      {
+        "name": "surface",
+        "value": "240ms",
+        "purpose": "Dialogs and intentional surface transitions."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "LifeOS state-transition easing."
+      },
+      {
+        "name": "today-orbit",
+        "value": "today-orbit 240s linear infinite",
+        "purpose": "Today decorative orbit rotation; disabled with prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "colorMeta": {
+      "today-primary": {
+        "role": "primary",
+        "displayName": "Today V1 Source Teal"
+      },
+      "today-background": {
+        "role": "neutral",
+        "displayName": "Today V1 Source Navy"
+      },
+      "today-light-primary": {
+        "role": "primary",
+        "displayName": "Today V1 Adapted Light Teal"
+      }
+    },
+    "typographyMeta": {
+      "today-display": {
+        "displayName": "Today Editorial Date",
+        "purpose": "Today only. 104px desktop; 88px at 1024-1279px; 80px below 1024px; 58px below 640px. Regular first line and italic second line."
+      },
+      "today-body": {
+        "displayName": "Today Geist",
+        "purpose": "Today body and controls; self-hosted weights 400, 500, 600 and 700."
+      }
+    },
+    "shadows": [
+      {
+        "name": "today-task-panel",
+        "value": "inset 0 1px 0 rgb(241 245 249 / 6%), inset 0 0 0 1px rgb(148 168 188 / 8%), 0 40px 80px -40px rgb(2 6 12 / 90%)",
+        "purpose": "Today V1 dark task surface only."
+      },
+      {
+        "name": "today-glance",
+        "value": "inset 0 1px 0 rgb(241 245 249 / 4.5%), inset 0 0 0 1px rgb(148 168 188 / 7%), 0 24px 48px -32px rgb(2 6 12 / 80%)",
+        "purpose": "Today V1 dark glance surface only."
+      },
+      {
+        "name": "today-rail",
+        "value": "inset 0 0 0 1px var(--hairline), 0 24px 48px -24px rgb(0 0 0 / 60%)",
+        "purpose": "Today V1 dark floating rail; light uses only the hairline inset."
+      }
+    ],
+    "todayV11": {
+      "scope": "Today desktop correction only; preserve Today V1 layout, mobile rules, legacy tokens and unrelated routes.",
+      "source": {
+        "commit": "bffc9c7abe600898ce9bf4a49e9656ea511ca7a7",
+        "tooltipReference": "v0 RailTooltip visual treatment; the source horizon native title is reference behavior only."
+      },
+      "integrationEvidence": "docs/v0-today-v11.md",
+      "reviewArtifacts": ".impeccable/review/v1.1",
+      "heroStatus": {
+        "heroColumns": "1.3fr 1fr",
+        "heroGap": "64px; 32px at 1024-1279px",
+        "heroAlignment": "end",
+        "statusColumns": "1.45fr 1fr",
+        "habitRing": {
+          "size": "76px",
+          "stroke": "4px",
+          "emptyState": "Dashed ring and em dash when no habits are scheduled."
+        },
+        "states": [
+          "Current event pulse, remaining duration, optional location and timed-event progress.",
+          "Upcoming event countdown.",
+          "Open-day quiet empty state."
+        ],
+        "timeBasis": "Profile timezone; real event and habit values."
+      },
+      "timeline": {
+        "range": "6 AM to midnight",
+        "past": "Muted",
+        "current": "Teal primary",
+        "upcoming": "Blue-gray",
+        "tooltip": {
+          "portalSelector": "body:has(.lifeos-v0) [data-today-tooltip]",
+          "delay": "100ms",
+          "sideOffset": "12px",
+          "collisionPadding": "16px",
+          "radius": "8px",
+          "padding": "8px 10px",
+          "fontSize": "12px",
+          "maxWidth": "min(300px, calc(100vw - 32px))",
+          "shadow": "inset 0 0 0 1px var(--hairline), 0 8px 20px -8px rgb(0 0 0 / 60%)",
+          "content": "Event title, time range, duration and optional location.",
+          "accessibility": "Focusable event buttons, visible focus and mounted-Today theme inheritance."
+        }
+      },
+      "taskComposer": {
+        "anchor": "Keep the inline title input mounted while activation reveals actions.",
+        "advancedFields": [
+          "area",
+          "priority",
+          "estimateMinutes",
+          "dueDate",
+          "notes"
+        ],
+        "behavior": "Preserve Enter submission, Escape cancellation, IME handling, pending/error validation and existing edit/delete controls."
+      },
+      "habits": {
+        "row": "Source icon, schedule/quantity metadata, completion control and separate detail link.",
+        "continuity": "Seven actual days distinguish scheduled/kept/rest states and outline today; accessible copy retains real streak and 30-day rate.",
+        "emptySubtitle": "Omit when zero habits are scheduled to avoid collision with empty content and action."
+      },
+      "reflection": {
+        "states": ["collapsed invitation", "editing form", "saved summary"],
+        "controls": "Five moon-phase mood radios and five bar-level energy radios; preserve numeric 1-5 mapping and keyboard semantics.",
+        "saveBehavior": "Require mood and energy, prevent duplicate pending saves, retain drafts after failure and preserve backend callbacks.",
+        "noteContract": "Optional notes remain gated by the existing noteEnabled contract; retain saved notes and existing edit/remove actions.",
+        "savedTimestamp": "Render only an actual supplied savedAt timestamp, formatted in the profile timezone."
+      },
+      "verification": {
+        "reportedChecks": [
+          "Typecheck passed",
+          "Lint passed",
+          "Build passed",
+          "39 unit tests passed",
+          "6 desktop end-to-end tests passed"
+        ],
+        "authenticatedPersistence": "Unverified: session ended. Do not claim a live persistence verification."
+      },
+      "invariants": [
+        "Keep schemaVersion 2 and all incumbent design tokens/sections.",
+        "Preserve Today V1 mobile layout and DOM/focus order.",
+        "No Finance or Habits route migration.",
+        "Do not replace application contracts or history with source fixtures."
+      ]
+    },
+    "todayDesktopRefinement": {
+      "scope": "Today desktop refinement only; preserve Today V1/V1.1 and unmigrated routes.",
+      "implementationRecord": "docs/today-desktop-refinement.md",
+      "reviewArtifacts": ".impeccable/review/today-refinement/",
+      "formSurfaces": {
+        "breakpoint": "min-width: 1024px",
+        "scope": ".today-experience task advanced/edit, event and reflection fields",
+        "background": "var(--surface-elevated)",
+        "border": "1px solid var(--border-strong)",
+        "shadow": "inset 0 1px 2px rgb(0 0 0 / 12%)",
+        "foreground": "var(--foreground)",
+        "focusOutline": "2px solid var(--primary)",
+        "focusOffset": "2px",
+        "invalidBorder": "var(--destructive)",
+        "editedTaskTitle": {
+          "padding": "6px 10px",
+          "radius": "8px"
+        },
+        "newTaskTitleAnchor": "Preserve the title-only anchor appearance."
+      },
+      "scheduleForms": {
+        "placement": "Inline inside Schedule for both creation and editing.",
+        "endDate": "Defaults to start date; custom LifeOS checkbox progressively reveals a separate multi-day End date.",
+        "preserve": [
+          "Profile-timezone conversion",
+          "Location",
+          "Date/time validation",
+          "Pending feedback",
+          "Drafts after errors",
+          "Focus return"
+        ],
+        "desktopReveal": {
+          "duration": "180ms",
+          "easing": "ease-out",
+          "opacity": "0 to 1",
+          "translation": "translateY(-3px) to translateY(0)",
+          "reducedMotion": "animation: none"
+        }
+      },
+      "weekMood": {
+        "habitBars": "Unchanged",
+        "indicator": "MoonPhase size 12 below each bar, using actual daily journal mood.",
+        "emptyAndFuture": "Neutral dashed circle; no invented mood history.",
+        "mapping": "Preserve established daily journal mood mapping and accessible meaning.",
+        "apiRead": "Weekly range through existing entryFrom/entryTo contract; additive query under existing api-today journal prefix. Existing keys and invalidation remain intact."
+      },
+      "invariants": [
+        "Preserve pinned Today source and all V1/V1.1 visual foundations.",
+        "Preserve existing profile date source and shared mock/API adapters.",
+        "No backend change or deployment.",
+        "No mobile redesign or Finance/Habits route migration."
+      ],
+      "verification": "Use the refinement implementation record for results; pending checks and authenticated persistence are not established by this metadata."
+    },
+    "todayV13": {
+      "scope": "Today V1.3 only; retain all previous Today checkpoints and unmigrated routes.",
+      "implementationRecord": "docs/today-v13.md",
+      "reviewArtifacts": ".impeccable/review/v1.3/",
+      "timezonePreference": {
+        "detection": "Intl.DateTimeFormat().resolvedOptions().timeZone",
+        "savedPreference": "Retain any valid saved profile timezone, including UTC. Use device fallback only when preference is absent or invalid.",
+        "hero": "Discreet inline metadata Popover explains device/profile mismatch.",
+        "keep": "Close without mutation.",
+        "useDevice": "Explicit existing profile mutation; preserve pending and error feedback.",
+        "newMockProfiles": "Device timezone default.",
+        "incompleteOnboarding": "Only initial UTC may visibly suggest the device timezone, with Keep saved timezone; persist only on explicit Finish.",
+        "backendLimitation": "No flag distinguishes explicit UTC from default UTC. Never infer permission to overwrite or automatically save it."
+      },
+      "clockAndRanges": {
+        "clock": "Minute updates shared by Today adapters; recalculate profile-local day boundaries.",
+        "apiEvents": "Local midnight through next local midnight; refetch on timezone change even if local date string is unchanged.",
+        "queryContracts": "Preserve existing query keys and invalidation behavior."
+      },
+      "calendarPortal": {
+        "radius": "24px",
+        "padding": "8px",
+        "innerCalendarRadius": "16px",
+        "innerCalendarPadding": "8px",
+        "collisionPadding": "16px",
+        "sideOffset": "10px",
+        "zIndex": 80
+      },
+      "timePicker": {
+        "radius": "16px",
+        "opening": "Highlight, focus and center the currently selected option.",
+        "options": "Quarter-hour choices plus the unchanged original off-grid time.",
+        "keyboard": ["ArrowUp", "ArrowDown", "Home", "End"]
+      },
+      "eventContinuity": {
+        "defaultStart": "Round local hour; minutes >=30 advance to next hour.",
+        "defaultEnd": "One real elapsed hour after start.",
+        "dstGap": "Advance nonexistent rounded local time to first valid quarter hour.",
+        "dstOverlap": "Retain current occurrence.",
+        "unchangedEdits": "Preserve unchanged UTC event instants.",
+        "endFollowing": "Follow start until explicitly edited; preserve valid explicit ends.",
+        "midnight": "Automatically set end date and multi-day state when end crosses midnight."
+      },
+      "taskEntry": {
+        "titleFocus": "Outer teal anchor only; no inner title outline or shadow. This supersedes title-specific desktop field focus guidance.",
+        "lifeAreaDefault": null,
+        "unassigned": "None/clear uses existing nullable backend DTO/service contract; no area tag.",
+        "assigned": "Preserve existing assigned areas."
+      },
+      "yourWeek": "Remove only All habits action; retain bars, actual moods and calculations.",
+      "invariants": [
+        "Preserve saved profile preferences and current mock/API adapters.",
+        "No automatic timezone writes or backend changes.",
+        "No Finance or Habits route migration.",
+        "Preserve all prior tokens, schema version 2 and unrelated route guidance."
+      ],
+      "verification": {
+        "independentVisualReview": "Final ship; no findings.",
+        "captures": 8,
+        "testsAndBuild": "Typecheck, lint and production build passed; 66 focused tests and 10 desktop browser tests passed. Authenticated persistence remains unverified.",
+        "authenticatedPersistence": "Not established by this design metadata."
+      }
+    },
+    "todayV14": {
+      "scope": "Current Today V1.4 presentation only; preserve legacy tokens, schema version 2, older checkpoint metadata and unrelated routes.",
+      "implementationRecord": "docs/today-v14.md",
+      "reviewArtifacts": ".impeccable/review/v1.4/",
+      "supersedes": [
+        "Earlier Today hero timezone label/control guidance.",
+        "Earlier fixed 6 AM-midnight Today horizon guidance.",
+        "Earlier edited-title inner-field padding/radius/focus treatment."
+      ],
+      "heroMetadata": {
+        "visible": "Week/day/time only; no timezone label or control.",
+        "effectiveTimezone": "Unchanged saved profile timezone, including valid UTC.",
+        "preferences": "Preserve initial onboarding device detection, saved preferences and existing Settings review/edit. No automatic preference writes."
+      },
+      "scheduleActions": {
+        "placement": "Reserved flex slot in event title/header.",
+        "slotWidth": "20px",
+        "iconButtonSize": "24px",
+        "alignment": "Centered",
+        "states": "Past, current and upcoming events retain geometry and visible keyboard focus; no opacity-driven layout shift."
+      },
+      "dayHorizon": {
+        "implementation": "src/components/lifeos/today/day-horizon-model.ts",
+        "baseLocalWindow": "06:00-22:00",
+        "expansion": "Expand to relevant timed-event earliest start/latest end outside base, with at least 30 minutes padding and outward local-hour rounding.",
+        "scale": "Linear actual elapsed UTC interval; preserve durations across DST.",
+        "overnight": "Keep full spans and previous/next-day offsets.",
+        "ticks": "Bound tick density; readable 12-hour labels with signed day offsets.",
+        "now": "Hide when outside visible interval; never falsely clamp to an edge.",
+        "excluded": "Invalid, unrelated and all-day records do not become timed bars."
+      },
+      "taskTitle": {
+        "states": ["creation", "editing"],
+        "surface": "Transparent, border 0, padding 0; no inner outline or shadow.",
+        "focus": "Single outer teal focus surface.",
+        "advancedFields": "Retain existing contrast, validation and focus treatment."
+      },
+      "timePicker": {
+        "labels": "12-hour AM/PM via formatClockTime",
+        "rawValues": "HH:mm callbacks remain unchanged.",
+        "preserve": [
+          "Backend timestamps",
+          "Quarter-hour choices",
+          "Selected-option focus and scrolling",
+          "Automatic event end behavior",
+          "DST behavior"
+        ]
+      },
+      "verification": {
+        "typecheck": "Passed",
+        "lint": "Passed",
+        "build": "Passed",
+        "focusedTests": {
+          "passed": 78,
+          "files": 15
+        },
+        "desktopBrowserTests": {
+          "passed": 14
+        },
+        "captures": 10,
+        "independentVisualReview": "Ship; all ten captures reviewed, no material findings.",
+        "authenticatedPersistence": "Unverified; no authenticated API session available."
+      },
+      "invariants": [
+        "No backend change or deployment.",
+        "No mobile redesign.",
+        "No Finance or Habits route migration.",
+        "All previous metadata remains historical; apply these explicit current overrides where guidance conflicts."
+      ]
+    },
+    "todayV15": {
+      "scope": "Latest Today V1.5 presentation only; preserve all historical tokens/checkpoints, schema version 2 and unrelated route definitions.",
+      "implementationRecord": "docs/today-v15.md",
+      "reviewArtifacts": ".impeccable/review/v1.5/",
+      "supersedes": [
+        "Historical Today 72px rail width and collapse/expansion interaction.",
+        "Historical long-list time-picker presentation.",
+        "Historical next-event title-area geometry.",
+        "Historical state-specific horizon colors; preserve V1.4 horizon geometry."
+      ],
+      "horizonEvents": {
+        "background": "color-mix(in srgb, var(--primary) 65%, var(--background))",
+        "baseHeight": "7px",
+        "past": {
+          "opacity": 0.4,
+          "height": "5px"
+        },
+        "current": {
+          "opacity": 0.95,
+          "height": "8px"
+        },
+        "upcoming": {
+          "opacity": 0.65,
+          "height": "7px"
+        },
+        "geometry": "Preserve all V1.4 elapsed-time, DST, expansion, tick and NOW visibility behavior."
+      },
+      "nowHalo": {
+        "target": "Outer pseudo-element only; center and event segments static.",
+        "animation": "today-now-halo 4s ease-in-out infinite",
+        "opacity": [0.08, 0.2],
+        "blur": "4px",
+        "scale": [0.85, 1.3],
+        "reducedMotion": {
+          "animation": "none",
+          "opacity": 0.1
+        }
+      },
+      "timePicker": {
+        "layout": "Three compact snap columns: Hour, Minutes, Period.",
+        "hours": "1-12",
+        "minutes": ["00", "15", "30", "45"],
+        "periods": ["AM", "PM"],
+        "columnHeight": "200px",
+        "rowHeight": "40px",
+        "verticalPadding": "80px",
+        "interaction": ["Wheel", "Touch", "Keyboard", "Pointer"],
+        "scroll": "Overscroll contained; selected value centered with focus restored on opening.",
+        "done": "Flush pending wheel position before closing.",
+        "legacyMinute": "Retain original off-quarter minute as a limited legacy-value option; never silently round on opening.",
+        "contracts": "Preserve raw HH:mm callbacks, timezone conversion, UTC timestamps, automatic event-end and DST behavior."
+      },
+      "todayRail": {
+        "width": "64px",
+        "mode": "Fixed floating rail; no expand control or interaction; ignore saved collapse preference within Today.",
+        "navigation": "Primary destinations at top; Settings/Profile at bottom; retain sign-out and tooltips.",
+        "contentOffset": "Derived automatically by flex layout.",
+        "scope": "Other desktop route behavior and mobile navigation remain unchanged."
+      },
+      "desktopNextEventTitle": {
+        "display": "flex",
+        "alignment": "center",
+        "minimumHeight": "86px",
+        "reservation": "Roughly three typical lines; keep short/wrapped geometry consistent.",
+        "overflow": "Exceptionally long titles grow readably; do not clip.",
+        "preserve": "Typography and split proportions."
+      },
+      "verification": {
+        "typecheck": "Passed",
+        "lint": "Passed",
+        "build": "Passed",
+        "focusedTests": {
+          "passed": 85,
+          "files": 16
+        },
+        "desktopBrowserTests": {
+          "passed": 18,
+          "coverage": [
+            "Real wheel",
+            "CDP touch",
+            "Scroll containment",
+            "Motion",
+            "Rail",
+            "Title geometry"
+          ]
+        },
+        "captures": 9,
+        "independentVisualReview": "Final ship; all nine captures opened; no issues. Footer Profile teal tooltip consistent.",
+        "captureErrors": [],
+        "viewportOverflow": false,
+        "reducedMotionHaloAnimation": "none",
+        "mockCleanup": "Temporary event deleted; edited title restored.",
+        "authenticatedPersistence": "Unverified; no authenticated API session available."
+      },
+      "invariants": [
+        "Preserve all prior tokens and checkpoint metadata as history; apply these latest Today overrides.",
+        "No backend change or deployment.",
+        "No mobile redesign.",
+        "No Finance or Habits route migration."
+      ]
+    },
+    "todayV1": {
+      "scope": ".lifeos-v0 and supported mounted-Today Radix portals only",
+      "source": {
+        "repository": "https://github.com/SDuque28/lifeos-development",
+        "commit": "bffc9c7abe600898ce9bf4a49e9656ea511ca7a7"
+      },
+      "implementation": [
+        "src/components/lifeos/today/today.css",
+        "src/components/lifeos/today/fonts.css",
+        "src/components/lifeos/today/atmosphere.tsx"
+      ],
+      "integrationEvidence": "docs/v0-today-v1.md",
+      "primitiveTokens": "DESIGN.md frontmatter: today-* only; incumbent tokens remain authoritative for unmigrated routes.",
+      "theme": "Dark palette is source-pinned; light is an application adaptation. Selection uses active-theme foreground.",
+      "layout": {
+        "contentMax": "1280px",
+        "desktopColumns": "7fr 5fr",
+        "desktopStart": "1024px",
+        "mobileDomOrder": ["tasks", "schedule", "habits", "check-in", "week"],
+        "leftColumnGap": "32px",
+        "rightColumnGap": "48px"
+      },
+      "atmosphere": {
+        "height": "720px",
+        "mask": "linear-gradient(to bottom,black 45%,transparent)",
+        "orbits": ["820px", "540px"],
+        "glowSize": "460px",
+        "glowBlur": "120px",
+        "reducedTransparency": "Opaque theme background; no shell backdrop blur."
+      },
+      "surfaceGradients": {
+        "task": "linear-gradient(180deg, #1a2938, #142130)",
+        "soft": "linear-gradient(180deg, rgb(28 43 57 / 55%), rgb(22 35 49 / 42%))"
+      },
+      "invariants": [
+        "Preserve AuthGate, TanStack Router, React Query and backend contracts.",
+        "Use the same Today presentation for mock and API data.",
+        "Retain existing application controls and capabilities.",
+        "No Finance or Habits route migration before Today approval."
+      ]
+    },
+    "sharedDesktopRailV2": {
+      "scope": "Every AppShell desktop route at widths >=1024px; mobile navigation unchanged.",
+      "implementation": [
+        "src/components/lifeos/app-shell.tsx",
+        "src/components/lifeos/app-shell.css"
+      ],
+      "supersedes": [
+        "Historical Today-only 72px/64px rail widths and expansion rules.",
+        "Historical footer Profile shortcut and other desktop rail presentation."
+      ],
+      "width": "58px",
+      "interactionTarget": "44px",
+      "margins": {
+        "top": "16px",
+        "right": "8px",
+        "bottom": "16px",
+        "left": "16px"
+      },
+      "padding": "16px 7px",
+      "radius": "28px",
+      "navigation": {
+        "primary": "Top",
+        "settings": "Bottom",
+        "profile": "Existing top-right account menu only; no sidebar Profile shortcut.",
+        "expansion": "No control or expansion interaction; fixed width independently of saved collapse preference.",
+        "contentOffset": "Derived by flex layout."
+      },
+      "preserve": [
+        "Destination/visibility rules",
+        "Sign-out",
+        "Tooltips",
+        "Keyboard focus",
+        "Existing mobile navigation"
+      ],
+      "implementationRecord": "docs/finance-v2.md",
+      "verification": {
+        "status": "Focused tests, applicable desktop checks, typecheck, lint and production build passed.",
+        "focusedTests": 60,
+        "focusedFiles": 16,
+        "desktopChecks": 11,
+        "desktopRunDetails": "10 passed final suite; remaining navigation check passed focused rerun; 2 mobile-only tests skipped.",
+        "visualVerdict": "ship: listed light-avatar contrast fix resolved; full initial review confirmed direction.",
+        "typecheck": "passed",
+        "lint": "passed",
+        "productionBuild": "passed"
+      }
+    },
+    "financeV2": {
+      "scope": "Approved desktop /finances overview only at >=1024px; retain existing mobile overview and Finance detail subpages.",
+      "implementationRecord": "docs/finance-v2.md",
+      "reviewArtifacts": ".impeccable/review/v2/",
+      "source": {
+        "repository": "https://github.com/SDuque28/lifeos-development",
+        "branch": "main",
+        "commit": "bffc9c7abe600898ce9bf4a49e9656ea511ca7a7",
+        "lastVerified": "2026-10-20",
+        "verificationMethod": "GitHub API",
+        "localCheckout": "../.reference-v0-finance"
+      },
+      "implementation": [
+        "src/components/lifeos/finance/overview-desktop.tsx",
+        "src/components/lifeos/finance/overview.css"
+      ],
+      "visualSystem": {
+        "body": "Geist, ui-sans-serif, system-ui, sans-serif",
+        "display": "Instrument Serif, Georgia, serif",
+        "assets": "Existing public/assets/fonts/v0 assets and licenses.",
+        "palette": "Source navy/teal assignments match preserved today-* primitives; scoped to desktop overview and supported mounted-overview portals.",
+        "lightTheme": "Application adaptation; source is dark-only.",
+        "scopeSelector": ".finance-overview-shell"
+      },
+      "layout": {
+        "desktopStart": "1024px",
+        "contentMax": "1280px",
+        "gutter": "40px",
+        "gutter1024To1199": "28px",
+        "sectionGap": "28px",
+        "introSize": "clamp(52px, 4.5vw, 68px)",
+        "sourceIntroSize": "84px",
+        "metricCount": 4,
+        "sourceMetricCount": 3,
+        "panelRadius": "28px",
+        "panelPadding": "24px",
+        "metricRadius": "24px",
+        "metricPadding": "20px",
+        "primaryColumns": "1.3fr 0.7fr",
+        "summaryColumns": "repeat(3, minmax(0, 1fr))",
+        "summary1024To1199": "Two columns; final panel spans both."
+      },
+      "data": {
+        "boundary": "Existing snapshot, selectors and query contracts unchanged.",
+        "totals": ["Total balance", "Income", "Expenses", "Net cash flow"],
+        "chart": "Existing cash-balance chart and range selectors; no six-month prototype bars.",
+        "upcomingLimit": 3,
+        "upcomingSource": "Actual standing orders sorted by nextDate.",
+        "summaries": ["Accounts", "Spending categories", "Budgets"],
+        "recentLimit": 5,
+        "recentSource": "Actual records sorted by descending date.",
+        "currency": "Actual record/account currency formatting; no hardcoded COP or source fixtures.",
+        "noFx": "Preserve existing API mixed-currency guard and explanations; no implicit FX aggregation.",
+        "emptySemantics": "Unavailable values differ from real zero; preserve sparse-history/range availability."
+      },
+      "forms": "Existing transaction forms retained; explicit Amount and Counterparty input aria labels only.",
+      "invariants": [
+        "Preserve all prior frontmatter values, historical checkpoint metadata and schemaVersion 2.",
+        "Preserve existing mobile overview and detail subpages.",
+        "No backend, cache contract, routing contract or deployment changes.",
+        "No prototype provider, fixtures or local demo state.",
+        "Unrelated module content remains unchanged; shared desktop rail is the authorized cross-route exception."
+      ],
+      "verification": {
+        "status": "Focused tests, applicable desktop checks, typecheck, lint and production build passed.",
+        "authenticatedPersistence": "Unverified: live API session expired; controlled API adapter/presentation tests passed.",
+        "focusedTests": 60,
+        "focusedFiles": 16,
+        "desktopChecks": 11,
+        "desktopRunDetails": "10 passed final suite; remaining navigation check passed focused rerun; 2 mobile-only tests skipped.",
+        "visualVerdict": "ship: listed light-avatar contrast fix resolved; full initial review confirmed direction.",
+        "typecheck": "passed",
+        "lint": "passed",
+        "productionBuild": "passed"
+      }
+    },
+    "financeV21A": {
+      "scope": "Finance V2.1 Checkpoint A only: desktop /finances overview at >=1024px and supported mounted-overview portals; preserve global tokens and all historical checkpoints.",
+      "implementationRecord": "docs/finance-v21-a.md",
+      "reviewArtifacts": ".impeccable/review/v21/",
+      "approvalGate": "Checkpoint B must not start until the user approves Checkpoint A.",
+      "supersedes": [
+        "Finance V2 overview segmented navigation presentation.",
+        "Finance V2 local teal assignment, 52-68px introduction, individual total-card geometry and 28px panel corners.",
+        "Finance V2 primary/summary panel placement and serif financial figures.",
+        "Finance V2 retained incumbent transaction-dialog presentation."
+      ],
+      "implementation": [
+        "src/components/lifeos/finance/overview-desktop.tsx",
+        "src/components/lifeos/finance/overview.css",
+        "src/components/lifeos/finance/transaction-dialog.tsx",
+        "src/components/lifeos/finance/finance-date-picker.tsx",
+        "src/components/lifeos/app-shell.tsx"
+      ],
+      "tokens": "DESIGN.md frontmatter: finance-v21-a-*; no existing global or Today token is replaced.",
+      "navigation": "Remove segmented overview navigation; retain routes and existing destinations/actions through relevant panels and controls.",
+      "atmosphere": "Remove Today atmosphere mounting from Finance; preserve Finance local subtle background wash and Today atmosphere.",
+      "typography": {
+        "intro": "{typography.finance-v21-a-intro}",
+        "financialFigures": "Geist sans-serif with tabular numerals, including totals and row amounts.",
+        "sectionTitles": "Existing Instrument Serif.",
+        "contextLabels": "Below headings, normal sentence case; retain original content and actual range values."
+      },
+      "layout": {
+        "contentMax": "1280px",
+        "gutter": "40px",
+        "gutter1024To1199": "28px",
+        "sectionGap": "28px",
+        "gridGap": "20px",
+        "totals": "Single divided strip containing all four existing totals.",
+        "rowOne": [
+          "Cash flow",
+          "Spending by category"
+        ],
+        "rowOneColumns": "1.3fr 0.7fr",
+        "rowTwo": [
+          "Accounts",
+          "Budgets",
+          "Next payments"
+        ],
+        "rowTwo1024To1199": "Two columns; Next payments spans both.",
+        "recentActivity": "Full width.",
+        "panelRadius": "{rounded.finance-v21-a-panel}",
+        "panelPadding": "{spacing.finance-v21-a-panel}",
+        "summaryPadding": "{spacing.finance-v21-a-summary-panel}"
+      },
+      "rowStates": {
+        "targets": [
+          "Accounts",
+          "Categories",
+          "Budgets",
+          "Payments",
+          "Recent activity"
+        ],
+        "coverage": "Extend across usable panel row width, within one-pixel panel inset.",
+        "hoverAndFocus": "color-mix(in srgb, var(--primary) 7%, transparent)",
+        "focus": "2px solid var(--primary); outline-offset: -3px",
+        "transition": "background-color 0.15s; disabled under reduced motion."
+      },
+      "transactionDialog": {
+        "maxWidth": "640px",
+        "viewportWidth": "calc(100vw - 64px)",
+        "maxHeight": "min(90dvh, 900px)",
+        "padding": "28px",
+        "radius": "{rounded.finance-v21-a-transaction}",
+        "surface": "Navy dialog in both themes; the light overview panel adaptation is separate.",
+        "title": "Instrument Serif, 34px, 400 weight.",
+        "controls": "Pill type choices and footer actions; 12px fields, stronger borders, 25px tabular amount.",
+        "datePicker": "FinanceDatePicker delegates unchanged values/callbacks to LifeOSDatePicker.",
+        "preserve": [
+          "Custom selectors/calendar",
+          "Validation",
+          "Focus handling",
+          "Pending/error states",
+          "Mutation payloads",
+          "Cache invalidation"
+        ]
+      },
+      "verification": {
+        "focusedTests": {
+          "passed": 63,
+          "files": 17
+        },
+        "desktopBrowserTests": {
+          "passed": 7,
+          "runDetails": "All seven passed in one final run."
+        },
+        "typecheck": "passed",
+        "lint": "passed",
+        "productionBuild": "passed",
+        "independentVisualReview": "Ship at scored correction scope; 13 refreshed captures reopened and both heading/report findings resolved. Evidence: .impeccable/review/v21/review.md and validation.json.",
+        "controlledApiContracts": "passed",
+        "authenticatedPersistence": "Unverified: live API session expired."
+      },
+      "invariants": [
+        "Preserve schemaVersion 2, all previous tokens, global narrative and historical checkpoint metadata.",
+        "Today remains unchanged.",
+        "Mobile Finance overview and Finance detail-page visuals remain unchanged.",
+        "Preserve snapshot/selectors, real currencies, no-FX guard, range availability and unavailable-versus-zero semantics.",
+        "No invented product data, prototype state, backend change, routing/cache contract change or deployment."
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Today V1 Task Surface",
+      "kind": "card",
+      "refersTo": "today-task-panel",
+      "description": "Source-pinned dark Today task surface; literal CSS allows standalone shadow-DOM preview.",
+      "html": "<section class=\"ds-today-task\"><p class=\"ds-today-eyebrow\">Focus</p><h2>Today’s tasks</h2><button type=\"button\" class=\"ds-today-add\">+ Add a task</button></section>",
+      "css": ".ds-today-task{background:linear-gradient(180deg,#1a2938,#142130);color:#f1f5f9;border-radius:32px;padding:32px;font-family:Geist,ui-sans-serif,system-ui,sans-serif;box-shadow:inset 0 1px 0 rgb(241 245 249 / 6%),inset 0 0 0 1px rgb(148 168 188 / 8%),0 40px 80px -40px rgb(2 6 12 / 90%)}.ds-today-eyebrow{color:#7d92a8;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}.ds-today-task h2{font-family:\"Instrument Serif\",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:-.01em}.ds-today-add{width:100%;height:48px;padding:0 16px;border:0;border-radius:999px;background:rgb(11 20 32 / 55%);color:#7d92a8;text-align:left;font:inherit;font-size:14px;cursor:pointer}.ds-today-add:hover{background:#1c2b39;color:#f1f5f9}.ds-today-add:focus-visible{outline:2px solid #46c7b7;outline-offset:2px}.ds-today-add:active{transform:translateY(1px)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Aurora Console",
+    "overview": "LifeOS is a dark-first personal operating system: information-dense enough to operate daily, calm enough to remain open for long sessions, and recognizable through its per-module Aurora headers. Its visual identity comes from cool ink surfaces, restrained borders, Montserrat typography, truthful data states, and precise module accents—not generic glass, heavy shadows, or decorative cards. The approved mock defines visual intent. Mock and API implementations reuse the same presentation components wherever practical. Data-source differences belong at the adapter or view-model layer and must never create alternate visual systems.",
+    "keyCharacteristics": [
+      "Dark-first with complete light-theme support.",
+      "Aurora imagery carries module identity; content surfaces stay restrained.",
+      "Compact, aligned, numeric dashboards with honest empty semantics.",
+      "Calm, fast interaction feedback without page-wide decorative motion."
+    ],
+    "rules": [
+      {
+        "name": "Module Identity",
+        "body": "Finance is emerald; Habits and Goals are distinct teals; Gym is cyan; Reading is violet; Study is blue; Analytics is cyan/blue; Settings is slate; Profile uses its selected personal accent. Never replace these identities with one universal product accent.",
+        "section": "colors"
+      },
+      {
+        "name": "Accent Restraint",
+        "body": "Module color belongs on icons, meaningful series, selection, focus, and small indicators. Large competing color fields are avoided.",
+        "section": "colors"
+      },
+      {
+        "name": "Stable Panel",
+        "body": "A panel does not animate merely because it mounted or refreshed.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Preserve the pinned v0 visual foundation within Today while keeping global Aurora definitions authoritative elsewhere.",
+      "Retain mobile DOM/focus order and active-theme selection contrast when adjusting Today.",
+      "Treat the approved mock as the source of visual intent.",
+      "Share presentation components between mock and API modes.",
+      "Preserve module accents and Aurora identities across themes.",
+      "Use real controls with visible focus and reduced-motion support.",
+      "Distinguish passive, interactive, selected, and elevated surfaces semantically."
+    ],
+    "donts": [
+      "Propagate Today tokens, fonts, corners or atmosphere into unmigrated routes.",
+      "Replace live application capabilities or data contracts with v0 fixtures or local demo state.",
+      "Redesign LifeOS into a generic SaaS dashboard.",
+      "Create alternate mock and API visual systems.",
+      "Animate every panel or add bouncy decorative movement.",
+      "Use large competing module-colored surfaces in Analytics.",
+      "Nest bordered cards when a section row or separator is sufficient.",
+      "Replace custom LifeOS controls with browser-native substitutes."
+    ]
+  }
+}
